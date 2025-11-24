@@ -301,3 +301,309 @@ struct SponsersView: View{
                 ]),
 
                 startPoint: .topLeading,
+
+                endPoint: .bottomTrailing
+
+            )
+
+            .ignoresSafeArea()
+
+            VStack{
+
+                Text("Sponsers:\n\nHonda\nNASA\nTerraData\nTech Solve\nSpark Creative\n\n Help us help you. Support the inititive.")
+
+                    .frame(maxWidth: .infinity)
+
+                    .multilineTextAlignment(.center)
+
+                    .foregroundColor(.white)
+
+                    .font(.system(size:32,weight: .bold))
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+struct UKGoalsView: View{
+
+    var body: some View{
+
+        ZStack{
+
+            LinearGradient(
+
+                gradient: Gradient(colors: [
+
+                    Color(hex: "003B73"),
+
+                    Color(hex: "4DA8D"),
+
+                ]),
+
+                startPoint: .topLeading,
+
+                endPoint: .bottomTrailing
+
+            )
+
+            .ignoresSafeArea()
+
+            VStack{
+
+                Text("UKGoals")
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+struct PenPalView: View{
+
+    var body: some View{
+
+        ZStack{
+
+            LinearGradient(
+
+                gradient: Gradient(colors: [
+
+                    Color(hex: "003B73"),
+
+                    Color(hex: "4DA8D"),
+
+                ]),
+
+                startPoint: .topLeading,
+
+                endPoint: .bottomTrailing
+
+            )
+
+            .ignoresSafeArea()
+
+            VStack(){
+
+                Text("Suggested people:")
+
+                    .font(.system(size:24,weight: .bold))
+
+                    .foregroundColor(.white)
+
+                    .multilineTextAlignment(.center)
+
+                Button("Violeta Le: Malaysia"){
+
+                }
+
+                .buttonStyle(.bordered)
+
+                    .accentColor(.white)
+
+                    .background(Color.teal)
+
+                    .cornerRadius(10)
+
+                    .padding(5)
+
+                Button("Damir Ford: Germany"){
+
+                }
+
+                .buttonStyle(.bordered)
+
+                .accentColor(.white)
+
+                .background(Color.teal)
+
+                .cornerRadius(10)
+
+                .padding(5)
+
+                Button("Amari Hail: Mongolia"){
+
+                }
+
+                .buttonStyle(.bordered)
+
+                .accentColor(.white)
+
+                .background(Color.teal)
+
+                .cornerRadius(10)
+
+                .padding(5)
+
+                Button("Kohen McDaniel: Netherlands"){
+
+                }
+
+                .buttonStyle(.bordered)
+
+                .accentColor(.white)
+
+                .background(Color.teal)
+
+                .cornerRadius(10)
+
+                .padding(5)
+
+                Button("Kelly Koch: Turkey"){
+
+                }
+
+                .buttonStyle(.bordered)
+
+                .accentColor(.white)
+
+                .background(Color.teal)
+
+                .cornerRadius(10)
+
+                .padding(5)
+
+                
+
+                HStack{
+
+                    Button("Local News"){
+
+                        //navigateToLocalNewsPage=true
+
+                    }
+
+                    .buttonStyle(.bordered)
+
+                    .accentColor(.white)
+
+                    .background(Color.red)
+
+                    .cornerRadius(10)
+
+                    .padding(.vertical, 30)
+
+                    /*NavigationLink(destination: LocalNewsView(), isActive: $navigateToLocalNewsPage){
+
+                        EmptyView()
+
+                    }*/
+
+                    
+
+                    Button("Global News"){
+
+                        //navigateToGlobalNewsPage = true
+
+                    }
+
+                    .buttonStyle(.bordered)
+
+                    .accentColor(.white)
+
+                    .background(Color.red)
+
+                    .cornerRadius(10)
+
+                    .padding(.vertical, 30)
+
+                    
+
+                    /*NavigationLink(destination: GlobalNewsView(), isActive: $navigateToGlobalNewsPage){
+
+                     EmptyView()
+
+                     }*/
+
+                    }
+
+                }
+
+            }
+
+        }
+
+}
+
+
+
+struct GlobalNewsView: View{
+
+    var body: some View{
+
+        ZStack{
+
+            LinearGradient(
+
+                gradient: Gradient(colors: [
+
+                    Color(hex: "003B73"),
+
+                    Color(hex: "4DA8D"),
+
+                ]),
+
+                startPoint: .topLeading,
+
+                endPoint: .bottomTrailing
+
+            )
+
+            .ignoresSafeArea()
+
+            VStack(){
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+struct LocalNewsView: View{
+
+    var body: some View{
+
+        ZStack{
+
+            LinearGradient(
+
+                gradient: Gradient(colors: [
+
+                    Color(hex: "003B73"),
+
+                    Color(hex: "4DA8D"),
+
+                ]),
+
+                startPoint: .topLeading,
+
+                endPoint: .bottomTrailing
+
+            )
+
+            .ignoresSafeArea()
+
+            VStack(){
+
+            }
+
+        }
+
+    }
+
+}
+
+
