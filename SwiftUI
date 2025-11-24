@@ -1,0 +1,303 @@
+import SwiftUI
+
+
+
+extension Color {
+
+    init(hex:String){
+
+        let scanner = Scanner(string: hex)
+
+        _ = scanner.scanString("#")
+
+        
+
+        var rgb: UInt64=0
+
+        scanner.scanHexInt64(&rgb)
+
+        let r = Double((rgb >> 16) & 0xFF) / 255
+
+        let g = Double((rgb >> 8) & 0xFF) / 255
+
+        let b  = Double(rgb & 0xFF) / 255
+
+        
+
+        self.init(red: r, green: g, blue: b)
+
+    }
+
+}
+
+
+
+struct ContentView: View {
+
+    @State private var navigateToAboutUsPage=false
+
+    @State private var navigateToUKGoalsPage=false
+
+    @State private var navigateToSponsersPage=false
+
+    @State private var navigateToPenPalPage=false
+
+    @State private var navigateToPersonPage=false
+
+    @State private var navigateToLocalNewsPage=false
+
+    @State private var navigateToGlobalNewsPage=false
+
+    
+
+    var body: some View {
+
+        NavigationStack{
+
+            ZStack{
+
+                LinearGradient(
+
+                    gradient: Gradient(colors: [
+
+                        Color(hex: "003B73"),
+
+                        Color(hex: "4DA8D"),
+
+                        
+
+                    ]),
+
+                    startPoint: .topLeading,
+
+                    endPoint: .bottomTrailing
+
+                )
+
+                .ignoresSafeArea()
+
+                VStack {
+
+                    Image(systemName: "globe")
+
+                        .resizable()
+
+                        .frame(width:100, height:100)
+
+                        .foregroundColor(.teal)
+
+                    Text("Culture Shock")
+
+                        .font(.system(size:48,weight: .bold))
+
+                        .foregroundColor(.white)
+
+                    HStack {
+
+                        Button("About us"){
+
+                            navigateToAboutUsPage=true
+
+                        }.buttonStyle(.bordered)
+
+                            .accentColor(.white)
+
+                            .background(Color.mint)
+
+                            .cornerRadius(10)
+
+                            .padding(5)
+
+                        NavigationLink(destination: AboutUsView(), isActive: $navigateToAboutUsPage){
+
+                            EmptyView()
+
+                        }
+
+                        
+
+                        Button("Sponsers"){
+
+                            navigateToSponsersPage=true
+
+                        }.buttonStyle(.bordered)
+
+                            .accentColor(.white)
+
+                            .background(Color.mint)
+
+                            .cornerRadius(10)
+
+                            .padding(5)
+
+                        NavigationLink(destination: SponsersView(), isActive: $navigateToSponsersPage){
+
+                            EmptyView()
+
+                        }
+
+                        
+
+                        Button("UKGoals"){
+
+                            navigateToUKGoalsPage=true
+
+                        }.buttonStyle(.bordered)
+
+                            .accentColor(.white)
+
+                            .background(Color.mint)
+
+                            .cornerRadius(10)
+
+                            .padding(5)
+
+                        NavigationLink(destination: UKGoalsView(), isActive: $navigateToUKGoalsPage){
+
+                            EmptyView()
+
+                        }
+
+                        
+
+                    }
+
+                    Button("PenPal"){
+
+                        navigateToPenPalPage=true
+
+                    }.buttonStyle(.bordered)
+
+                        .accentColor(.white)
+
+                        .background(Color.red)
+
+                        .cornerRadius(10)
+
+                        .padding(5)
+
+                    NavigationLink(destination: PenPalView(), isActive: $navigateToPenPalPage){
+
+                        EmptyView()
+
+                    }
+
+                }
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+struct AboutUsView: View{
+
+    var body: some View{
+
+        ZStack{
+
+            LinearGradient(
+
+                gradient: Gradient(colors: [
+
+                    Color(hex: "003B73"),
+
+                    Color(hex: "4DA8D"),
+
+                ]),
+
+                startPoint: .topLeading,
+
+                endPoint: .bottomTrailing
+
+            )
+
+            .ignoresSafeArea()
+
+            VStack{
+
+                Text("John Jackson").font(.system(size:24,weight: .bold))
+
+                    .foregroundColor(.white)
+
+                Text("Creative Designer: Designed the app, logo, and graphical UI, visually displaying what Culture Shock represents")
+
+                    .frame(maxWidth: .infinity)
+
+                    .multilineTextAlignment(.center)
+
+                    .foregroundColor(Color(hex: "031b38"))
+
+                
+
+                Text("Ayushka Talele").font(.system(size:24,weight: .bold))
+
+                    .foregroundColor(.white)
+
+                Text("Software Developer: Designed all code, formatting, and back-end programming, turning idea into code.")
+
+                    .frame(maxWidth: .infinity)
+
+                    .multilineTextAlignment(.center)
+
+                    .foregroundColor(Color(hex: "031b38"))
+
+                
+
+                Text("Kemar Hester and Daniel Flores").font(.system(size:24,weight: .bold))
+
+                    .foregroundColor(.white)
+
+                Text("Communication Specialist: Lead team communication, pitch and presentation, visual storytelling, and teamwork, scripting and presenting.")
+
+                    .frame(maxWidth: .infinity)
+
+                    .multilineTextAlignment(.center)
+
+                    .foregroundColor(Color(hex: "031b38"))
+
+                
+
+                Text("Camilla Stalworth").font(.system(size:24,weight: .bold))
+
+                    .foregroundColor(.white)
+
+                Text("Innovation Specialist: Creative problem solving.")
+
+                    .frame(maxWidth: .infinity)
+
+                    .multilineTextAlignment(.center)
+
+                    .foregroundColor(Color(hex: "031b38"))
+
+            }
+
+        }
+
+    }
+
+}
+
+
+
+struct SponsersView: View{
+
+    var body: some View{
+
+        ZStack{
+
+            LinearGradient(
+
+                gradient: Gradient(colors: [
+
+                    Color(hex: "003B73"),
+
+                    Color(hex: "4DA8D"),
+
+                ]),
+
+                startPoint: .topLeading,
